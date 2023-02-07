@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="img.css">
+    <style>
+        *{
+    margin: 30px auto auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.image{
+    position: relative;
+    overflow: hidden;
+}
+
+.image > img{
+    display: block;
+    object-fit: cover;
+    object-position: center;
+    max-width: 700px;
+    width: 100%;
+    margin: auto;
+    
+}
+
+.image > .content{
+    position: absolute;
+    inset: 0;
+    font-size: 5rem;
+    padding: 5rem;
+    background: rgba(0, 0, 0, .70 );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 700px;
+    width: 100%;
+    margin: auto;
+    color: #fff;
+}
+
+.image > img,
+.image > .content{
+    transition: 700ms ease-in-out;
+}
+
+.image > .content{
+    opacity: 0;
+}
+
+.image:hover > .content{
+    opacity: 1;
+}
+
+    </style>
+</head>
+<body>
+    <div class="image">
+        <img src="https://picsum.photos/700/500?random=1">
+        <div class="content">
+            Hello Wrold
+        </div>
+    </div>
+</body>
+</html>
